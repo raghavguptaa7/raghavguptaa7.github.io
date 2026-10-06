@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raghav Gupta | Full Stack &amp; Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F7;--surface:#FFFFFF;--ink:#14213D;--muted:#506080;--line:#CBD5E3;--accent:#2F5BEA;--token:#E8962E;--on-accent:#fff;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1626;--surface:#172138;--ink:#E6ECF8;--muted:#9AA8C4;--line:#2A3857;--accent:#7C9CFF;--token:#F2A93B;--on-accent:#0F1626}
+}
+:root[data-theme="dark"]{--bg:#0F1626;--surface:#172138;--ink:#E6ECF8;--muted:#9AA8C4;--line:#2A3857;--accent:#7C9CFF;--token:#F2A93B;--on-accent:#0F1626}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;padding:1.25rem 0;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-size:clamp(2.8rem,8vw,5rem);font-weight:700}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34ch;margin:1.25rem 0 1.5rem}
+.links{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn{display:inline-block;padding:.6rem 1.1rem;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.bucket{background:var(--surface);border:1.5px solid var(--ink);border-radius:20px;padding:1.25rem}
+.bucket h2{font-size:1.1rem;margin-bottom:.25rem}
+.bucket small{color:var(--muted);display:block;margin-bottom:1rem;font-size:.9rem;line-height:1.4}
+.tokens{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-bottom:1rem}
+.t{aspect-ratio:1;border-radius:50%;border:2px dashed var(--line);transition:background .2s,border-color .2s,transform .2s}
+.t.on{background:var(--token);border:2px solid var(--token)}
+.bucket button{width:100%;padding:.7rem;border-radius:12px;border:0;background:var(--accent);color:var(--on-accent);font:500 1rem "IBM Plex Sans",sans-serif;cursor:pointer}
+.bucket button:active{transform:translateY(1px)}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1rem}
+.mods span{border:1.5px solid var(--line);border-radius:12px;padding:.7rem .6rem;font-size:.92rem;font-weight:500;text-align:center}
+.go{display:block;text-align:center;padding:.7rem;border-radius:12px;background:var(--accent);color:var(--on-accent);font-weight:500;text-decoration:none}
+.go:hover{background:var(--ink);color:var(--bg)}
+#log{margin:.8rem 0 0;font-size:.9rem;min-height:1.4em;color:var(--muted)}
+#log b{color:var(--ink)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+section>h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:1.75rem}
+.row{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 2rem;padding:1.5rem 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0;padding-top:0}
+.when{color:var(--muted);font-size:.95rem}
+.row h3{font-size:1.4rem;margin-bottom:.15rem}
+.sub{color:var(--muted);margin:0 0 .75rem}
+ul{margin:0;padding-left:1.15rem}
+li{margin-bottom:.5rem;max-width:68ch}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.chips span{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.15rem .6rem;font-size:.88rem}
+.skills dl{display:grid;grid-template-columns:11rem 1fr;gap:.9rem 2rem;margin:0}
+.skills dt{font-weight:500}
+.skills dd{margin:0;color:var(--muted)}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-bottom:2rem}
+.stats div{font-family:"Bricolage Grotesque",sans-serif;font-size:2.4rem;font-weight:700;line-height:1}
+.stats span{display:block;font:400 .9rem "IBM Plex Sans",sans-serif;color:var(--muted);margin-top:.35rem}
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line)}
+footer h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:1rem}
+footer p{color:var(--muted);margin:0 0 1.25rem}
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;padding-top:1.5rem}
+  .row,.skills dl{grid-template-columns:1fr}
+  .skills dl{gap:.2rem}.skills dd{margin-bottom:.8rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.t{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections">
+  <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#achievements">Achievements</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <h1>Raghav Gupta</h1>
+    <p class="lead">Full stack engineer who builds backend services, REST APIs and AI-powered apps. Final-year B.Tech, NIT Kurukshetra.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:guptaraghav2277@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/raghavguptaa7" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/raghav-gupta-388a25283" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://leetcode.com/u/raghavguptaa77/" target="_blank" rel="noopener">LeetCode</a>
+      <a class="btn" href="https://codeforces.com/profile/raghav_guptaa" target="_blank" rel="noopener">Codeforces</a>
+    </div>
+  </div>
+  <div class="bucket" aria-label="Featured project: Elevate">
+    <h2>Elevate</h2>
+    <small>AI-powered study and career coaching platform. React.js, Flask and a Groq-hosted LLM, with JWT authentication.</small>
+    <div class="mods"><span>Resume analysis</span><span>Interview prep</span><span>Study planning</span><span>Career guidance</span></div>
+    <a class="go" href="https://elevate-ih62.onrender.com/" target="_blank" rel="noopener">Open the live app</a>
+  </div>
+</header>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="row">
+    <div class="when">Jul 2026 – Present<br>Remote</div>
+    <div>
+      <h3>AI/ML Intern</h3>
+      <p class="sub">NeoSkillz</p>
+      <ul>
+        <li>Built 3+ modular, API-driven Python components for the NHS Digital Hospital Agent, a Generative AI platform for patient triage, appointment booking and clinical Q&amp;A, shipped in bi-weekly agile sprints.</li>
+        <li>Designed a triage chatbot model and a RAG pipeline with vector-based retrieval, cutting manual lookup effort for clinical Q&amp;A by an estimated 30%.</li>
+        <li>Applied NLP and text analytics, with exposure to MLOps for deployment and monitoring.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="row">
+    <div class="when">Apr – Jun 2025</div>
+    <div>
+      <h3>Elevate</h3>
+      <p class="sub">AI-powered study and career coaching platform</p>
+      <ul>
+        <li>Full-stack app with 4 modules: resume analysis, interview prep, study planning and career guidance. Prompt-driven workflows run on a Groq-hosted LLM.</li>
+        <li>JWT access and refresh tokens with bcrypt password hashing across 10+ endpoints, backed by SQLite.</li>
+      </ul>
+      <div class="chips"><span>React.js</span><span>Flask</span><span>Groq LLM</span><span>JWT</span><span>SQLite</span></div>
+      <p><a href="https://elevate-ih62.onrender.com/" target="_blank" rel="noopener">Live demo</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="when">Jul 2026</div>
+    <div>
+      <h3>Token Bucket Rate Limiter</h3>
+      <p class="sub">Distributed backend service</p>
+      <ul>
+        <li>Rate-limiting service with configurable per-client thresholds (for example 100 requests per minute) for distributed request throttling.</li>
+        <li>5+ modular REST endpoints documented with Swagger/OpenAPI, with Spring Boot Actuator health monitoring. Containerized with Docker and deployed on Render.</li>
+      </ul>
+      <div class="chips"><span>Java</span><span>Spring Boot</span><span>Redis</span><span>Docker</span></div>
+      <p><a href="https://rate-limiter-service-2q4j.onrender.com/" target="_blank" rel="noopener">Live demo</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="when">Sep – Dec 2024</div>
+    <div>
+      <h3>Cric Score</h3>
+      <p class="sub">Cricket analytics and prediction engine</p>
+      <ul>
+        <li>Automated pipeline for ingestion, validation and feature engineering over 5,000+ records. Scikit-learn model reaches an R-squared of 0.87.</li>
+        <li>Served through a Flask REST API with GitHub Actions CI/CD, cutting deployment time by an estimated 40%.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Flask</span><span>GitHub Actions</span></div>
+      <p><a href="https://cricscoreprediction.onrender.com/" target="_blank" rel="noopener">Live demo</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <dl>
+    <dt>Languages</dt><dd>Java, Python, JavaScript (ES6+), C++, C, SQL</dd>
+    <dt>Backend and web</dt><dd>Spring Boot, Flask, FastAPI, React.js, Node.js, Express.js, REST APIs, JWT, Redis</dd>
+    <dt>AI and data</dt><dd>Machine Learning, Deep Learning, NLP, Generative AI, LLMs, RAG pipelines, Scikit-learn, Pandas, NumPy</dd>
+    <dt>Tools</dt><dd>Git, GitHub Actions, Docker, CI/CD, Linux, JUnit, PyTest</dd>
+    <dt>Core CS</dt><dd>Data Structures and Algorithms, OOP, DBMS, Operating Systems, Computer Networks, Distributed Systems</dd>
+  </dl>
+</section>
+
+<section id="achievements">
+  <h2>Achievements and leadership</h2>
+  <div class="stats">
+    <div>1829<span>Codeforces rating (Expert)</span></div>
+    <div>1,000+<span>DSA problems solved</span></div>
+    <div>Top 20<span>of 500+ teams, SIH 2024 college round</span></div>
+  </div>
+  <ul>
+    <li><b>Amazon ML Summer School 2025.</b> Selected nationally for an applied machine learning program led by Amazon scientists.</li>
+    <li><b>Smart India Hackathon 2024 finalist.</b> Built and deployed a full-stack solution under strict time limits.</li>
+    <li><b>Lead Organizer, MAD NITKKR (Confluence 2025).</b> Directed 10+ cross-functional teams for 1,000+ attendees.</li>
+    <li><b>Team Lead, Anant Math Society (Techspardha 2025).</b> Led an 8-member team running competitive mathematics events.</li>
+  </ul>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="row">
+    <div class="when">Aug 2023 – May 2027</div>
+    <div>
+      <h3>National Institute of Technology, Kurukshetra</h3>
+      <p class="sub">B.Tech in Mathematics and Computing. CGPA 7.65 / 10</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="when">May 2023</div>
+    <div>
+      <h3>Tulsi Public School, Ambala City</h3>
+      <p class="sub">CBSE Senior Secondary, 89.8%. JEE Advanced AIR 9009. JEE Mains 98.78 percentile.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>Open to full-time roles for 2027</h2>
+  <p>Backend, full-stack and AI/ML engineering. The quickest way to reach me is email.</p>
+  <div class="links">
+    <a class="btn primary" href="mailto:guptaraghav2277@gmail.com">guptaraghav2277@gmail.com</a>
+    <a class="btn" href="tel:+918168530887">+91 81685 30887</a>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
